@@ -1,4 +1,5 @@
 // -VARIABLES-
+const startingPage = document.getElementsByClassName('btn__reset')[0];
 const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const overlay = document.getElementById('overlay');
@@ -52,7 +53,6 @@ function checkLetter(guess) {
 
 // -APP-
 const phraseArray = getRandomPhraseAsArray(phrases);
-const startingPage = document.getElementsByClassName('btn__reset')[0];
 addPhraseToDisplay(phraseArray);
 
 startingPage.addEventListener('click', () => {
@@ -81,12 +81,13 @@ qwerty.addEventListener('click', (pressed) => {
   }
 })
 
-/* -RESTART GAME-
+// -RESTART GAME-
 startingPage.addEventListener('click', () => {
   if (overlay.classList.contains('win') || overlay.classList.contains('lose')) {
     missed = 0;
+    //rename button to 'restart'
     //recreate buttons on the keyboard
     //generate a new random phrase
+    overlay.style.display = 'flex'; //temporary code to prevent faulty restart
   }
 });
-*/
