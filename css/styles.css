@@ -4,13 +4,14 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
-  --color-lose: #D94545;
-  --color-start: #5b85b7;
+  --color-win: #8BD293;
+  --color-lose: #DB6565;
+  --color-start: #1A3453;
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
   --color-keys-light: #E5E5E5;
+  --color-checked: #F1A161;
   --font-size-large: 60px;
   --font-size-medium: 20px;
   --transition: all .2s ease-in-out;
@@ -26,7 +27,7 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   display: flex;
-  height: 100vh;
+  height: 95vh;
 }
 
 li, ol, ul {
@@ -38,11 +39,12 @@ h2 {
   margin: 0;
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
-  font-size: var(--font-size-large);
+  font-size: 3.2em;
   margin: 0;
 }
 
 button {
+  cursor: pointer;
   margin: 6px;
   border: 1px solid transparent;
   padding: .5rem 1rem;
@@ -85,21 +87,23 @@ button {
   margin-right: 2px;
   color: transparent;
   background: var(--color-neutral-light);
-  border-radius: 5px;
-}
-
-.letter li {
-  transition-delay: 1s;
-  transform: rotate(1turn);
+  border-radius: 7px;
 }
 
 .space {
-  width: 15px;
+  width: 13px;
+}
+
+.letter, .space {
+  margin-bottom: 10px;
 }
 
 .show {
   color: #000;
-  background-color: #76CE82;
+  background-color: var(--color-win);
+  transition-duration: 0.4s;
+  transform: rotate(1turn);
+  tarnsition-timing function: ease-in-out;
 }
 
 /* Keyboard */
@@ -113,13 +117,26 @@ button {
   background: var(--color-neutral);
   border-radius: 5px;
   font-size: var(--font-size-medium);
-  color: #FFFFFF;
+  color: #fff;
+}
+
+.wrong {
+  background: var(--color-checked);
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+  color: #fff;
+}
+
+.description {
+  margin-top: 50px;
+  font-size: 1.05em;
 }
 
 .btn__reset {
-  padding: 8px;
-  margin: 50px auto;
-  background: #FFFFFF;
+  cursor: pointer;
+  padding: 9px 13px;
+  margin: 20px auto 70px;
+  background: #F1A161;
   border-radius: 5px;
   font-size: var(--font-size-medium);
 }
@@ -148,7 +165,7 @@ button {
 }
 
 .start a {
-  color: var(--color-win);
+  color: #fff;
 }
 
 .win {
@@ -156,7 +173,7 @@ button {
 }
 
 .win a {
-  color: var(--color-win);
+  color: #fff;
 }
 
 .lose {
@@ -164,5 +181,5 @@ button {
 }
 
 .lose a {
-  color: var(--color-lose);
+  color: #fff;
 }
