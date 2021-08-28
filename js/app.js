@@ -16,22 +16,29 @@ const phrases = [
   'Food for thought',
   'Rag to riches',
   'Rule of thumb'
+  /* -ITALIAN PHRASES-
+  'Chi la dura la vince',
+  'Vivi e lascia vivere',
+  'Meglio tardi che mai',
+  'Chi cerca trova',
+  'Tentar non nuoce'
+  */
 ];
 
 // -FUNCTIONS-
-function getRandomPhraseAsArray(arr) {
-  const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)].toLowerCase();
+function getRandomPhraseAsArray(e) {
+  const randomPhrase = e[Math.floor(Math.random() * e.length)].toLowerCase();
   const characters = Array.from(randomPhrase)
   return characters;
 };
 
-function addPhraseToDisplay(arr) {
-  for (let i=0; i < arr.length; i++) {
+function addPhraseToDisplay(e) {
+  for (let i=0; i < e.length; i++) {
     const ul = document.querySelector('#phrase ul');
     const li = document.createElement('li');
-    li.appendChild(document.createTextNode(arr[i]));
+    li.appendChild(document.createTextNode(e[i]));
     ul.appendChild(li);
-    if (arr[i] !== ' ') {
+    if (e[i] !== ' ') {
       li.classList.add('letter')
     } else {
       li.classList.add('space')
