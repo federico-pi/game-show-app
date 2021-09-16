@@ -16,13 +16,11 @@ const phrases = [
   'Food for thought',
   'Rag to riches',
   'Rule of thumb'
-  /* -ITALIAN PHRASES-
-  'Chi la dura la vince',
-  'Vivi e lascia vivere',
-  'Meglio tardi che mai',
-  'Chi cerca trova',
-  'Tentar non nuoce'
-  */
+  // 'Chi la dura la vince',
+  // 'Vivi e lascia vivere',
+  // 'Meglio tardi che mai',
+  // 'Chi cerca trova',
+  // 'Tentar non nuoce'
 ];
 
 // -FUNCTIONS-
